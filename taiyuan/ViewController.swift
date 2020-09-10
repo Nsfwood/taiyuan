@@ -3,7 +3,6 @@
 //  taiyuan
 //
 //  Created by Alexander Rohrig on 9/10/20.
-//  Copyright © 2020 Alexander Rohrig. All rights reserved.
 //
 
 import Cocoa
@@ -230,13 +229,19 @@ extension ViewController: NSTableViewDelegate {
         else if tableColumn?.identifier == NSUserInterfaceItemIdentifier(rawValue: "rgbCol") {
             let cell = NSUserInterfaceItemIdentifier(rawValue: "nameCell")
             guard let view = tableView.makeView(withIdentifier: cell, owner: self) as? NSTableCellView else { return nil }
-            view.textField?.stringValue = "R:200 G:200 B:200"
+            let r = lists[listIndex].color(withKey: currentColor)?.redComponent
+            let g = lists[listIndex].color(withKey: currentColor)?.greenComponent
+            let b = lists[listIndex].color(withKey: currentColor)?.blueComponent
+            view.textField?.stringValue = "rgb(\(r!), \(g!), \(b!))"
+            view.textField?.font = NSFont.monospacedSystemFont(ofSize: NSFont.systemFontSize(for: .regular), weight: .regular)
             return view
         }
         else if tableColumn?.identifier == NSUserInterfaceItemIdentifier(rawValue: "hexCol") {
             let cell = NSUserInterfaceItemIdentifier(rawValue: "nameCell")
             guard let view = tableView.makeView(withIdentifier: cell, owner: self) as? NSTableCellView else { return nil }
-            view.textField?.stringValue = "#ff00ff"
+            let c = lists[listIndex].color(withKey: currentColor)?.hexString
+            view.textField?.stringValue = c!
+            view.textField?.font = NSFont.monospacedSystemFont(ofSize: NSFont.systemFontSize(for: .regular), weight: .regular)
             return view
         }
         else if tableColumn?.identifier == NSUserInterfaceItemIdentifier(rawValue: "preCol") {
@@ -249,5 +254,19 @@ extension ViewController: NSTableViewDelegate {
         }
         
         return nil
+    }
+}
+
+extension NSColor {
+
+    var hexString: String {
+        guard let rgbColor = usingColorSpaceName(NSColorSpaceName.calibratedRGB) else {
+            return "#FFFFFF"
+        }
+        let red = Int(round(rgbColor.redComponent * 0xFF))
+        let green = Int(round(rgbColor.greenComponent * 0xFF))
+        let blue = Int(round(rgbColor.blueComponent * 0xFF))
+        let hexString = NSString(format: "#%02X%02X%02X", red, green, blue)
+        return hexString as String
     }
 }
