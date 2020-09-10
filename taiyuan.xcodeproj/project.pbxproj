@@ -1,0 +1,584 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		08293312250AB18D009E4B3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08293311250AB18D009E4B3D /* AppDelegate.swift */; };
+		08293314250AB18D009E4B3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08293313250AB18D009E4B3D /* ViewController.swift */; };
+		08293316250AB191009E4B3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08293315250AB191009E4B3D /* Assets.xcassets */; };
+		08293319250AB191009E4B3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08293317250AB191009E4B3D /* Main.storyboard */; };
+		08293325250AB192009E4B3D /* taiyuanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08293324250AB192009E4B3D /* taiyuanTests.swift */; };
+		08293330250AB192009E4B3D /* taiyuanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0829332F250AB192009E4B3D /* taiyuanUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		08293321250AB192009E4B3D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08293306250AB18D009E4B3D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0829330D250AB18D009E4B3D;
+			remoteInfo = taiyuan;
+		};
+		0829332C250AB192009E4B3D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08293306250AB18D009E4B3D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0829330D250AB18D009E4B3D;
+			remoteInfo = taiyuan;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0829330E250AB18D009E4B3D /* taiyuan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = taiyuan.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		08293311250AB18D009E4B3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		08293313250AB18D009E4B3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		08293315250AB191009E4B3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		08293318250AB191009E4B3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0829331A250AB191009E4B3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0829331B250AB191009E4B3D /* taiyuan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = taiyuan.entitlements; sourceTree = "<group>"; };
+		08293320250AB192009E4B3D /* taiyuanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = taiyuanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		08293324250AB192009E4B3D /* taiyuanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = taiyuanTests.swift; sourceTree = "<group>"; };
+		08293326250AB192009E4B3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0829332B250AB192009E4B3D /* taiyuanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = taiyuanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0829332F250AB192009E4B3D /* taiyuanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = taiyuanUITests.swift; sourceTree = "<group>"; };
+		08293331250AB192009E4B3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0829330B250AB18D009E4B3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0829331D250AB192009E4B3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		08293328250AB192009E4B3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08293305250AB18D009E4B3D = {
+			isa = PBXGroup;
+			children = (
+				08293310250AB18D009E4B3D /* taiyuan */,
+				08293323250AB192009E4B3D /* taiyuanTests */,
+				0829332E250AB192009E4B3D /* taiyuanUITests */,
+				0829330F250AB18D009E4B3D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0829330F250AB18D009E4B3D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0829330E250AB18D009E4B3D /* taiyuan.app */,
+				08293320250AB192009E4B3D /* taiyuanTests.xctest */,
+				0829332B250AB192009E4B3D /* taiyuanUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		08293310250AB18D009E4B3D /* taiyuan */ = {
+			isa = PBXGroup;
+			children = (
+				08293311250AB18D009E4B3D /* AppDelegate.swift */,
+				08293313250AB18D009E4B3D /* ViewController.swift */,
+				08293315250AB191009E4B3D /* Assets.xcassets */,
+				08293317250AB191009E4B3D /* Main.storyboard */,
+				0829331A250AB191009E4B3D /* Info.plist */,
+				0829331B250AB191009E4B3D /* taiyuan.entitlements */,
+			);
+			path = taiyuan;
+			sourceTree = "<group>";
+		};
+		08293323250AB192009E4B3D /* taiyuanTests */ = {
+			isa = PBXGroup;
+			children = (
+				08293324250AB192009E4B3D /* taiyuanTests.swift */,
+				08293326250AB192009E4B3D /* Info.plist */,
+			);
+			path = taiyuanTests;
+			sourceTree = "<group>";
+		};
+		0829332E250AB192009E4B3D /* taiyuanUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0829332F250AB192009E4B3D /* taiyuanUITests.swift */,
+				08293331250AB192009E4B3D /* Info.plist */,
+			);
+			path = taiyuanUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0829330D250AB18D009E4B3D /* taiyuan */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 08293334250AB192009E4B3D /* Build configuration list for PBXNativeTarget "taiyuan" */;
+			buildPhases = (
+				0829330A250AB18D009E4B3D /* Sources */,
+				0829330B250AB18D009E4B3D /* Frameworks */,
+				0829330C250AB18D009E4B3D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = taiyuan;
+			productName = taiyuan;
+			productReference = 0829330E250AB18D009E4B3D /* taiyuan.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0829331F250AB192009E4B3D /* taiyuanTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 08293337250AB192009E4B3D /* Build configuration list for PBXNativeTarget "taiyuanTests" */;
+			buildPhases = (
+				0829331C250AB192009E4B3D /* Sources */,
+				0829331D250AB192009E4B3D /* Frameworks */,
+				0829331E250AB192009E4B3D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				08293322250AB192009E4B3D /* PBXTargetDependency */,
+			);
+			name = taiyuanTests;
+			productName = taiyuanTests;
+			productReference = 08293320250AB192009E4B3D /* taiyuanTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0829332A250AB192009E4B3D /* taiyuanUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0829333A250AB192009E4B3D /* Build configuration list for PBXNativeTarget "taiyuanUITests" */;
+			buildPhases = (
+				08293327250AB192009E4B3D /* Sources */,
+				08293328250AB192009E4B3D /* Frameworks */,
+				08293329250AB192009E4B3D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0829332D250AB192009E4B3D /* PBXTargetDependency */,
+			);
+			name = taiyuanUITests;
+			productName = taiyuanUITests;
+			productReference = 0829332B250AB192009E4B3D /* taiyuanUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08293306250AB18D009E4B3D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1170;
+				LastUpgradeCheck = 1170;
+				ORGANIZATIONNAME = "Alexander Rohrig";
+				TargetAttributes = {
+					0829330D250AB18D009E4B3D = {
+						CreatedOnToolsVersion = 11.7;
+					};
+					0829331F250AB192009E4B3D = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = 0829330D250AB18D009E4B3D;
+					};
+					0829332A250AB192009E4B3D = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = 0829330D250AB18D009E4B3D;
+					};
+				};
+			};
+			buildConfigurationList = 08293309250AB18D009E4B3D /* Build configuration list for PBXProject "taiyuan" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 08293305250AB18D009E4B3D;
+			productRefGroup = 0829330F250AB18D009E4B3D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0829330D250AB18D009E4B3D /* taiyuan */,
+				0829331F250AB192009E4B3D /* taiyuanTests */,
+				0829332A250AB192009E4B3D /* taiyuanUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0829330C250AB18D009E4B3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08293316250AB191009E4B3D /* Assets.xcassets in Resources */,
+				08293319250AB191009E4B3D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0829331E250AB192009E4B3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		08293329250AB192009E4B3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0829330A250AB18D009E4B3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08293314250AB18D009E4B3D /* ViewController.swift in Sources */,
+				08293312250AB18D009E4B3D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0829331C250AB192009E4B3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08293325250AB192009E4B3D /* taiyuanTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		08293327250AB192009E4B3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08293330250AB192009E4B3D /* taiyuanUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		08293322250AB192009E4B3D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0829330D250AB18D009E4B3D /* taiyuan */;
+			targetProxy = 08293321250AB192009E4B3D /* PBXContainerItemProxy */;
+		};
+		0829332D250AB192009E4B3D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0829330D250AB18D009E4B3D /* taiyuan */;
+			targetProxy = 0829332C250AB192009E4B3D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		08293317250AB191009E4B3D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				08293318250AB191009E4B3D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		08293332250AB192009E4B3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		08293333250AB192009E4B3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		08293335250AB192009E4B3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = taiyuan/taiyuan.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3865YC2YEY;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = taiyuan/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexanderrohrig.taiyuan;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		08293336250AB192009E4B3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = taiyuan/taiyuan.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3865YC2YEY;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = taiyuan/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexanderrohrig.taiyuan;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		08293338250AB192009E4B3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3865YC2YEY;
+				INFOPLIST_FILE = taiyuanTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexanderrohrig.taiyuanTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/taiyuan.app/Contents/MacOS/taiyuan";
+			};
+			name = Debug;
+		};
+		08293339250AB192009E4B3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3865YC2YEY;
+				INFOPLIST_FILE = taiyuanTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexanderrohrig.taiyuanTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/taiyuan.app/Contents/MacOS/taiyuan";
+			};
+			name = Release;
+		};
+		0829333B250AB192009E4B3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3865YC2YEY;
+				INFOPLIST_FILE = taiyuanUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexanderrohrig.taiyuanUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = taiyuan;
+			};
+			name = Debug;
+		};
+		0829333C250AB192009E4B3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3865YC2YEY;
+				INFOPLIST_FILE = taiyuanUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexanderrohrig.taiyuanUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = taiyuan;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		08293309250AB18D009E4B3D /* Build configuration list for PBXProject "taiyuan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08293332250AB192009E4B3D /* Debug */,
+				08293333250AB192009E4B3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		08293334250AB192009E4B3D /* Build configuration list for PBXNativeTarget "taiyuan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08293335250AB192009E4B3D /* Debug */,
+				08293336250AB192009E4B3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		08293337250AB192009E4B3D /* Build configuration list for PBXNativeTarget "taiyuanTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08293338250AB192009E4B3D /* Debug */,
+				08293339250AB192009E4B3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0829333A250AB192009E4B3D /* Build configuration list for PBXNativeTarget "taiyuanUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0829333B250AB192009E4B3D /* Debug */,
+				0829333C250AB192009E4B3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08293306250AB18D009E4B3D /* Project object */;
+}
