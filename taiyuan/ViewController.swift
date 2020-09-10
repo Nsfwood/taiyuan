@@ -20,6 +20,14 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let menu = NSMenu()
+        menu.addItem(NSMenuItem(title: "Copy Color as HEX", action: #selector(tableViewCopyHEXClicked(_:)), keyEquivalent: ""))
+        menu.addItem(NSMenuItem(title: "Copy Color as RGB", action: #selector(tableViewCopyRGBClicked(_:)), keyEquivalent: ""))
+        menu.addItem(NSMenuItem(title: "Add Color Below", action: #selector(tableViewAddClicked(_:)), keyEquivalent: ""))
+        menu.addItem(NSMenuItem(title: "Rename Color", action: #selector(tableViewRenameClicked(_:)), keyEquivalent: ""))
+        menu.addItem(NSMenuItem(title: "Delete Color", action: #selector(tableViewDeleteClicked(_:)), keyEquivalent: ""))
+        
+        tableView.menu = menu
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -50,6 +58,30 @@ class ViewController: NSViewController {
         let keys = l.allKeys
         print(keys)
         tableView.reloadData()
+    }
+    
+    @IBAction func colorPickerPressed(_ sender: Any) {
+        NSApplication.shared.orderFrontColorPanel(self)
+    }
+    
+    @objc private func tableViewCopyHEXClicked(_ sender: AnyObject) {
+        
+    }
+    
+    @objc private func tableViewCopyRGBClicked(_ sender: AnyObject) {
+        
+    }
+    
+    @objc private func tableViewAddClicked(_ sender: AnyObject) {
+        
+    }
+    
+    @objc private func tableViewRenameClicked(_ sender: AnyObject) {
+        
+    }
+    
+    @objc private func tableViewDeleteClicked(_ sender: AnyObject) {
+        
     }
     
     func getListOfColorLists() {
@@ -232,7 +264,13 @@ extension ViewController: NSTableViewDelegate {
             let r = lists[listIndex].color(withKey: currentColor)?.redComponent
             let g = lists[listIndex].color(withKey: currentColor)?.greenComponent
             let b = lists[listIndex].color(withKey: currentColor)?.blueComponent
-            view.textField?.stringValue = "rgb(\(r!), \(g!), \(b!))"
+            if let r = r {
+                if let g = g {
+                    if let b = b {
+                        view.textField?.stringValue = "\(r), \(g), \(b)"
+                    }
+                }
+            }
             view.textField?.font = NSFont.monospacedSystemFont(ofSize: NSFont.systemFontSize(for: .regular), weight: .regular)
             return view
         }
@@ -240,7 +278,9 @@ extension ViewController: NSTableViewDelegate {
             let cell = NSUserInterfaceItemIdentifier(rawValue: "nameCell")
             guard let view = tableView.makeView(withIdentifier: cell, owner: self) as? NSTableCellView else { return nil }
             let c = lists[listIndex].color(withKey: currentColor)?.hexString
-            view.textField?.stringValue = c!
+            if let c = c {
+                view.textField?.stringValue = c
+            }
             view.textField?.font = NSFont.monospacedSystemFont(ofSize: NSFont.systemFontSize(for: .regular), weight: .regular)
             return view
         }

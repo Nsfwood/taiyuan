@@ -22,7 +22,11 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
-                                        <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
+                                        <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW">
+                                            <connections>
+                                                <segue destination="0hP-Hy-qbB" kind="show" id="dRC-8j-2qc"/>
+                                            </connections>
+                                        </menuItem>
                                         <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
                                         <menuItem title="Services" id="NMo-om-nkz">
                                             <modifierMask key="keyEquivalentModifierMask"/>
@@ -82,26 +86,24 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="WRV-NI-Exz"/>
-                                        <menuItem title="Cut" keyEquivalent="x" id="uRl-iY-unG">
-                                            <connections>
-                                                <action selector="cut:" target="Ady-hI-5gd" id="YJe-68-I9s"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Copy" keyEquivalent="c" id="x3v-GG-iWU">
-                                            <connections>
-                                                <action selector="copy:" target="Ady-hI-5gd" id="G1f-GL-Joy"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Paste" keyEquivalent="v" id="gVA-U4-sdL">
-                                            <connections>
-                                                <action selector="paste:" target="Ady-hI-5gd" id="UvS-8e-Qdg"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Delete" id="pa3-QI-u2k">
+                                        <menuItem title="Add New Palette" id="DqJ-2r-4tP" userLabel="Add">
                                             <modifierMask key="keyEquivalentModifierMask"/>
-                                            <connections>
-                                                <action selector="delete:" target="Ady-hI-5gd" id="0Mk-Ml-PaM"/>
-                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Rename Palette" id="cNh-TY-N5v">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem title="Delete Palette" id="xcZ-cJ-eoL">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="FO6-uy-7Qb"/>
+                                        <menuItem title="Add New Color" id="lyK-g3-JTS">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem title="Rename Selected Color" id="SV9-cu-teL">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem title="Delete Selected Color" id="Rj3-v0-86T">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
                                         </menuItem>
                                     </items>
                                 </menu>
@@ -187,7 +189,87 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="-198" y="225"/>
+        </scene>
+        <!--Preferences-->
+        <scene sceneID="Ecj-Fr-lHM">
+            <objects>
+                <viewController title="Preferences" id="0hP-Hy-qbB" sceneMemberID="viewController">
+                    <view key="view" id="pVL-NN-lkW">
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="120"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZlL-Bn-Ang">
+                                <rect key="frame" x="8" y="10" width="234" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Made with ❤️ and ☕️" id="5fn-d0-eTS">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <gridView xPlacement="leading" yPlacement="center" rowAlignment="firstBaseline" translatesAutoresizingMaskIntoConstraints="NO" id="rNe-sg-zeB">
+                                <rect key="frame" x="20" y="36" width="210" height="64"/>
+                                <rows>
+                                    <gridRow id="P2y-xS-K6K"/>
+                                    <gridRow id="Oom-wU-LF6"/>
+                                </rows>
+                                <columns>
+                                    <gridColumn id="iaZ-YU-s1i"/>
+                                    <gridColumn id="A6e-Af-K2c"/>
+                                </columns>
+                                <gridCells>
+                                    <gridCell row="P2y-xS-K6K" column="iaZ-YU-s1i" id="Uis-4u-meP">
+                                        <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IM0-1d-obg">
+                                            <rect key="frame" x="-2" y="45" width="78" height="16"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="RGB Format" id="CqC-2G-nts">
+                                                <font key="font" usesAppearanceFont="YES"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                    </gridCell>
+                                    <gridCell row="P2y-xS-K6K" column="A6e-Af-K2c" id="R8V-O0-ymo">
+                                        <popUpButton key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GRg-fS-mYj">
+                                            <rect key="frame" x="92" y="39" width="121" height="25"/>
+                                            <popUpButtonCell key="cell" type="push" title="Floating Point" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="lI5-wK-LhE" id="dTK-sh-lD6">
+                                                <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                                <menu key="menu" id="6q7-8Y-tPX">
+                                                    <items>
+                                                        <menuItem title="Floating Point" state="on" id="lI5-wK-LhE"/>
+                                                        <menuItem title="8-bit" id="6V6-bf-iia"/>
+                                                    </items>
+                                                </menu>
+                                            </popUpButtonCell>
+                                        </popUpButton>
+                                    </gridCell>
+                                    <gridCell row="Oom-wU-LF6" column="iaZ-YU-s1i" id="04U-xO-4Cb"/>
+                                    <gridCell row="Oom-wU-LF6" column="A6e-Af-K2c" id="MaK-ev-mpb">
+                                        <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eL2-0X-F4b">
+                                            <rect key="frame" x="88" y="1" width="84" height="32"/>
+                                            <buttonCell key="cell" type="push" title="Donate" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fId-vM-ea4">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                        </button>
+                                    </gridCell>
+                                </gridCells>
+                            </gridView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="ZlL-Bn-Ang" firstAttribute="top" secondItem="rNe-sg-zeB" secondAttribute="bottom" constant="10" id="9NE-K4-J6r"/>
+                            <constraint firstAttribute="trailing" secondItem="rNe-sg-zeB" secondAttribute="trailing" constant="20" id="BHO-KS-5lh"/>
+                            <constraint firstAttribute="trailing" secondItem="ZlL-Bn-Ang" secondAttribute="trailing" constant="10" id="PuY-02-IGA"/>
+                            <constraint firstItem="rNe-sg-zeB" firstAttribute="top" secondItem="pVL-NN-lkW" secondAttribute="top" constant="20" id="qmd-Am-yuf"/>
+                            <constraint firstItem="ZlL-Bn-Ang" firstAttribute="leading" secondItem="pVL-NN-lkW" secondAttribute="leading" constant="10" id="ujy-YH-LWw"/>
+                            <constraint firstItem="rNe-sg-zeB" firstAttribute="leading" secondItem="pVL-NN-lkW" secondAttribute="leading" constant="20" id="vn8-MA-8fr"/>
+                            <constraint firstAttribute="bottom" secondItem="ZlL-Bn-Ang" secondAttribute="bottom" constant="10" id="xqU-gv-qH5"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="cMh-z7-boI" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="336" y="290"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
@@ -223,6 +305,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="colorPickerPressed:" target="XfG-lQ-9wD" id="u6S-Ak-u6i"/>
+                                </connections>
                             </button>
                             <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="aRO-AA-bV5">
                                 <rect key="frame" x="10" y="10" width="496" height="219"/>
@@ -403,7 +488,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="-69" y="722"/>
         </scene>
     </scenes>
 </document>
