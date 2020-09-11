@@ -1,0 +1,177 @@
+
+/* Class = "NSTableColumn"; headerCell.title = "Preview"; ObjectID = "0IH-66-Nnw"; */
+"0IH-66-Nnw.headerCell.title" = "anteprima";
+
+/* Class = "NSViewController"; title = "Preferences"; ObjectID = "0hP-Hy-qbB"; */
+"0hP-Hy-qbB.title" = "Preferenze";
+
+/* Class = "NSMenuItem"; title = "taiyuan"; ObjectID = "1Xt-HY-uBw"; */
+"1Xt-HY-uBw.title" = "Taiyuan";
+
+/* Class = "NSMenuItem"; title = "Enter Full Screen"; ObjectID = "4J7-dP-txa"; */
+"4J7-dP-txa.title" = "Enter Full Screen";
+
+/* Class = "NSMenuItem"; title = "Quit taiyuan"; ObjectID = "4sb-4s-VLi"; */
+"4sb-4s-VLi.title" = "Quit Taiyuan";
+
+/* Class = "NSMenuItem"; title = "Edit"; ObjectID = "5QF-Oa-p0T"; */
+"5QF-Oa-p0T.title" = "Edit";
+
+/* Class = "NSTextFieldCell"; title = "Made with ❤️"; ObjectID = "5fn-d0-eTS"; */
+"5fn-d0-eTS.title" = "fatto con ❤️";
+
+/* Class = "NSMenuItem"; title = "About taiyuan"; ObjectID = "5kV-Vb-QxS"; */
+"5kV-Vb-QxS.title" = "About taiyuan";
+
+/* Class = "NSMenuItem"; title = "8-bit"; ObjectID = "6V6-bf-iia"; */
+"6V6-bf-iia.title" = "8 bit";
+
+/* Class = "NSMenuItem"; title = "Redo"; ObjectID = "6dh-zS-Vam"; */
+"6dh-zS-Vam.title" = "Redo";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "97z-7Y-W3h"; */
+"97z-7Y-W3h.title" = "Item 2";
+
+/* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
+"AYu-sK-qS6.title" = "Main Menu";
+
+/* Class = "NSMenuItem"; title = "Preferences…"; ObjectID = "BOF-NM-1cW"; */
+"BOF-NM-1cW.title" = "Preferences…";
+
+/* Class = "NSTextFieldCell"; title = "RGB Format:"; ObjectID = "CqC-2G-nts"; */
+"CqC-2G-nts.title" = "Formato RGB:";
+
+/* Class = "NSMenuItem"; title = "Close"; ObjectID = "DVo-aG-piG"; */
+"DVo-aG-piG.title" = "Close";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "DVr-iy-ENM"; */
+"DVr-iy-ENM.title" = "Item 1";
+
+/* Class = "NSTextFieldCell"; title = "Current Color Space:"; ObjectID = "Dl0-If-uCQ"; */
+"Dl0-If-uCQ.title" = "Spazio dei colori:";
+
+/* Class = "NSMenuItem"; title = "Add New Palette"; ObjectID = "DqJ-2r-4tP"; */
+"DqJ-2r-4tP.title" = "Add New Palette";
+
+/* Class = "NSMenu"; title = "Help"; ObjectID = "F2S-fz-NVQ"; */
+"F2S-fz-NVQ.title" = "Help";
+
+/* Class = "NSMenuItem"; title = "taiyuan Help"; ObjectID = "FKE-Sm-Kum"; */
+"FKE-Sm-Kum.title" = "taiyuan Help";
+
+/* Class = "NSMenuItem"; title = "View"; ObjectID = "H8h-7b-M4v"; */
+"H8h-7b-M4v.title" = "View";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "HxN-TV-7rM"; */
+"HxN-TV-7rM.title" = "Text Cell";
+
+/* Class = "NSMenu"; title = "View"; ObjectID = "HyV-fh-RgO"; */
+"HyV-fh-RgO.title" = "View";
+
+/* Class = "NSWindow"; title = "Taiyuan"; ObjectID = "IQv-IB-iLA"; */
+"IQv-IB-iLA.title" = "Taiyuan";
+
+/* Class = "NSTableColumn"; headerCell.title = "RGB"; ObjectID = "K1I-PW-dv7"; */
+"K1I-PW-dv7.headerCell.title" = "RGB";
+
+/* Class = "NSMenuItem"; title = "Show All"; ObjectID = "Kd2-mp-pUS"; */
+"Kd2-mp-pUS.title" = "Show All";
+
+/* Class = "NSTextFieldCell"; title = "Table View Cell"; ObjectID = "L1x-v5-Icw"; */
+"L1x-v5-Icw.title" = "Table View Cell";
+
+/* Class = "NSMenuItem"; title = "Bring All to Front"; ObjectID = "LE2-aR-0XJ"; */
+"LE2-aR-0XJ.title" = "Bring All to Front";
+
+/* Class = "NSMenuItem"; title = "Services"; ObjectID = "NMo-om-nkz"; */
+"NMo-om-nkz.title" = "Services";
+
+/* Class = "NSMenuItem"; title = "Minimize"; ObjectID = "OY7-WF-poV"; */
+"OY7-WF-poV.title" = "Minimize";
+
+/* Class = "NSMenuItem"; title = "Hide taiyuan"; ObjectID = "Olw-nP-bQN"; */
+"Olw-nP-bQN.title" = "Hide taiyuan";
+
+/* Class = "NSMenuItem"; title = "Zoom"; ObjectID = "R4o-n2-Eq4"; */
+"R4o-n2-Eq4.title" = "Zoom";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "RGV-Qc-zfU"; */
+"RGV-Qc-zfU.title" = "Text Cell";
+
+/* Class = "NSMenuItem"; title = "Delete Selected Color"; ObjectID = "Rj3-v0-86T"; */
+"Rj3-v0-86T.title" = "Delete Selected Color";
+
+/* Class = "NSMenuItem"; title = "Rename Selected Color"; ObjectID = "SV9-cu-teL"; */
+"SV9-cu-teL.title" = "Rename Selected Color";
+
+/* Class = "NSMenu"; title = "Window"; ObjectID = "Td7-aD-5lo"; */
+"Td7-aD-5lo.title" = "Window";
+
+/* Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "Vdr-fp-XzO"; */
+"Vdr-fp-XzO.title" = "Hide Others";
+
+/* Class = "NSMenu"; title = "Edit"; ObjectID = "W48-6f-4Dl"; */
+"W48-6f-4Dl.title" = "Edit";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "Y8f-gB-haL"; */
+"Y8f-gB-haL.title" = "Text Cell";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "ZMF-1r-4ZH"; */
+"ZMF-1r-4ZH.title" = "Item 3";
+
+/* Class = "NSMenuItem"; title = "Window"; ObjectID = "aUF-d1-5bR"; */
+"aUF-d1-5bR.title" = "Window";
+
+/* Class = "NSTextFieldCell"; title = "Table View Cell"; ObjectID = "aes-DH-6Kh"; */
+"aes-DH-6Kh.title" = "Table View Cell";
+
+/* Class = "NSMenu"; title = "File"; ObjectID = "bib-Uj-vzu"; */
+"bib-Uj-vzu.title" = "File";
+
+/* Class = "NSMenuItem"; title = "Rename Palette"; ObjectID = "cNh-TY-N5v"; */
+"cNh-TY-N5v.title" = "Rename Palette";
+
+/* Class = "NSTextFieldCell"; title = "__SCREEN__"; ObjectID = "cmz-AH-QSg"; */
+"cmz-AH-QSg.title" = "__SCREEN__";
+
+/* Class = "NSMenuItem"; title = "File"; ObjectID = "dMs-cI-mzQ"; */
+"dMs-cI-mzQ.title" = "File";
+
+/* Class = "NSMenuItem"; title = "Undo"; ObjectID = "dRJ-4n-Yzg"; */
+"dRJ-4n-Yzg.title" = "Undo";
+
+/* Class = "NSTextFieldCell"; title = "Table View Cell"; ObjectID = "ewr-mi-y8p"; */
+"ewr-mi-y8p.title" = "Table View Cell";
+
+/* Class = "NSButtonCell"; title = "Donate"; ObjectID = "fId-vM-ea4"; */
+"fId-vM-ea4.title" = "Donare";
+
+/* Class = "NSButtonCell"; title = "Open Color Picker"; ObjectID = "hDh-Q4-Hat"; */
+"hDh-Q4-Hat.title" = "Apri Color Picker";
+
+/* Class = "NSMenu"; title = "Services"; ObjectID = "hz9-B4-Xy5"; */
+"hz9-B4-Xy5.title" = "Services";
+
+/* Class = "NSMenuItem"; title = "Floating Point"; ObjectID = "lI5-wK-LhE"; */
+"lI5-wK-LhE.title" = "Virgola mobile";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "lkv-w3-cUK"; */
+"lkv-w3-cUK.title" = "Text Cell";
+
+/* Class = "NSMenuItem"; title = "Add New Color"; ObjectID = "lyK-g3-JTS"; */
+"lyK-g3-JTS.title" = "Add New Color";
+
+/* Class = "NSMenu"; title = "taiyuan"; ObjectID = "uQy-DD-JDr"; */
+"uQy-DD-JDr.title" = "taiyuan";
+
+/* Class = "NSTableColumn"; headerCell.title = "HEX"; ObjectID = "wPW-yN-XHX"; */
+"wPW-yN-XHX.headerCell.title" = "esa";
+
+/* Class = "NSMenuItem"; title = "Help"; ObjectID = "wpr-3q-Mcd"; */
+"wpr-3q-Mcd.title" = "Help";
+
+/* Class = "NSMenuItem"; title = "Delete Palette"; ObjectID = "xcZ-cJ-eoL"; */
+"xcZ-cJ-eoL.title" = "Delete Palette";
+
+/* Class = "NSTableColumn"; headerCell.title = "Name"; ObjectID = "zNV-8q-PHg"; */
+"zNV-8q-PHg.headerCell.title" = "nome";

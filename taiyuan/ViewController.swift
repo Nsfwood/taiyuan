@@ -13,6 +13,7 @@ class ViewController: NSViewController {
     var bookmarks = [URL: Data]()
     var lists = NSColorList.availableColorLists
     var listIndex = 0
+    var rgbIs8Bit = true
 
     @IBOutlet weak var colorListPicker: NSPopUpButton!
     @IBOutlet weak var tableView: NSTableView!
@@ -20,12 +21,14 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        NSLocalizedString("Delete Color", comment: "")
+        
         let menu = NSMenu()
-        menu.addItem(NSMenuItem(title: "Copy Color as HEX", action: #selector(tableViewCopyHEXClicked(_:)), keyEquivalent: ""))
-        menu.addItem(NSMenuItem(title: "Copy Color as RGB", action: #selector(tableViewCopyRGBClicked(_:)), keyEquivalent: ""))
-        menu.addItem(NSMenuItem(title: "Add Color Below", action: #selector(tableViewAddClicked(_:)), keyEquivalent: ""))
-        menu.addItem(NSMenuItem(title: "Rename Color", action: #selector(tableViewRenameClicked(_:)), keyEquivalent: ""))
-        menu.addItem(NSMenuItem(title: "Delete Color", action: #selector(tableViewDeleteClicked(_:)), keyEquivalent: ""))
+        menu.addItem(NSMenuItem(title: NSLocalizedString("Copy Color as HEX", comment: ""), action: #selector(tableViewCopyHEXClicked(_:)), keyEquivalent: ""))
+        menu.addItem(NSMenuItem(title: NSLocalizedString("Copy Color as RGB", comment: ""), action: #selector(tableViewCopyRGBClicked(_:)), keyEquivalent: ""))
+        menu.addItem(NSMenuItem(title: NSLocalizedString("Add Color Below", comment: ""), action: #selector(tableViewAddClicked(_:)), keyEquivalent: ""))
+        menu.addItem(NSMenuItem(title: NSLocalizedString("Rename Color", comment: ""), action: #selector(tableViewRenameClicked(_:)), keyEquivalent: ""))
+        menu.addItem(NSMenuItem(title: NSLocalizedString("Delete Color", comment: ""), action: #selector(tableViewDeleteClicked(_:)), keyEquivalent: ""))
         
         tableView.menu = menu
         tableView.delegate = self
@@ -267,7 +270,12 @@ extension ViewController: NSTableViewDelegate {
             if let r = r {
                 if let g = g {
                     if let b = b {
-                        view.textField?.stringValue = "\(r), \(g), \(b)"
+                        if rgbIs8Bit {
+                            view.textField?.stringValue = "\(Int(round(r*255))), \(Int(round(g*255))), \(Int(round(b*255)))"
+                        }
+                        else {
+                            view.textField?.stringValue = "\(r), \(g), \(b)"
+                        }
                     }
                 }
             }
