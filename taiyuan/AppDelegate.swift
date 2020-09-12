@@ -23,6 +23,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
+    @IBAction func helpPressed(_ sender: Any) {
+        let url = URL(string: "https://github.com/Nsfwood/taiyuan/blob/master/README.md#help")!
+        NSWorkspace.shared.open(url)
+    }
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         NSApplication.shared.isAutomaticCustomizeTouchBarMenuItemEnabled = true
     }
