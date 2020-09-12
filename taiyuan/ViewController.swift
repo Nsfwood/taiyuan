@@ -9,12 +9,14 @@ import Cocoa
 import Foundation
 
 let settingsRGBTypeKey = "taiyuan.settings.rgbDisplayType"
+let settingsRoundRGBKey = "taiyuan.settings.rgbRoundFloatingPoint"
 
 class ViewController: NSViewController {
     
     var bookmarks = [URL: Data]()
     var lists = NSColorList.availableColorLists
     var listIndex = 0
+    var currentColorListIsEditable = false
     
     let defaults = UserDefaults.standard
     
@@ -31,9 +33,12 @@ class ViewController: NSViewController {
         let menu = NSMenu()
         menu.addItem(NSMenuItem(title: NSLocalizedString("Copy Color as HEX", comment: ""), action: #selector(tableViewCopyHEXClicked(_:)), keyEquivalent: ""))
         menu.addItem(NSMenuItem(title: NSLocalizedString("Copy Color as RGB", comment: ""), action: #selector(tableViewCopyRGBClicked(_:)), keyEquivalent: ""))
-        menu.addItem(NSMenuItem(title: NSLocalizedString("Add Color Below", comment: ""), action: #selector(tableViewAddClicked(_:)), keyEquivalent: ""))
-        menu.addItem(NSMenuItem(title: NSLocalizedString("Rename Color", comment: ""), action: #selector(tableViewRenameClicked(_:)), keyEquivalent: ""))
-        menu.addItem(NSMenuItem(title: NSLocalizedString("Delete Color", comment: ""), action: #selector(tableViewDeleteClicked(_:)), keyEquivalent: ""))
+        
+        if currentColorListIsEditable {
+            menu.addItem(NSMenuItem(title: NSLocalizedString("Add Color Below", comment: ""), action: #selector(tableViewAddClicked(_:)), keyEquivalent: ""))
+            menu.addItem(NSMenuItem(title: NSLocalizedString("Rename Color", comment: ""), action: #selector(tableViewRenameClicked(_:)), keyEquivalent: ""))
+            menu.addItem(NSMenuItem(title: NSLocalizedString("Delete Color", comment: ""), action: #selector(tableViewDeleteClicked(_:)), keyEquivalent: ""))
+        }
         
         tableView.menu = menu
         tableView.delegate = self
@@ -61,11 +66,30 @@ class ViewController: NSViewController {
     
     @IBAction func colorListPicked(_ sender: Any) {
         let l = lists[colorListPicker.indexOfSelectedItem]
-        listIndex = colorListPicker.indexOfSelectedItem
-        print(l)
-        let keys = l.allKeys
-        print(keys)
-        tableView.reloadData()
+        
+        if l.isEditable {
+            currentColorListIsEditable = true
+        }
+        else {
+            currentColorListIsEditable = false
+        }
+        
+        if l.name == "System" {
+            let alert = NSAlert()
+            alert.messageText = "Unable to Show This Palette"
+            alert.informativeText = "Due to an unknown error, we are unable to show this color palette. We are working on a fix."
+            alert.alertStyle = .critical
+            alert.addButton(withTitle: "OK")
+            alert.runModal()
+            colorListPicker.selectItem(at: 0)
+        }
+        else {
+            listIndex = colorListPicker.indexOfSelectedItem
+            print(l)
+            let keys = l.allKeys
+            print(keys)
+            tableView.reloadData()
+        }
     }
     
     @IBAction func colorPickerPressed(_ sender: Any) {
@@ -80,7 +104,24 @@ class ViewController: NSViewController {
     }
     
     @objc private func tableViewCopyRGBClicked(_ sender: AnyObject) {
-        
+        let colorName = lists[listIndex].allKeys[tableView.clickedRow]
+        let color = lists[listIndex].color(withKey: colorName)
+        var stringToCopy = ""
+        if let color = color {
+            let colorR = color.redComponent
+            let colorG = color.greenComponent
+            let colorB = color.blueComponent
+            
+            if defaults.bool(forKey: settingsRGBTypeKey) {
+                stringToCopy = "\(Int(round(colorR*255))), \(Int(round(colorG*255))), \(Int(round(colorB*255)))"
+            }
+            else {
+                stringToCopy = "\(colorR), \(colorG), \(colorB)"
+            }
+            
+            pasteboard.declareTypes([.string], owner: nil)
+            pasteboard.setString(stringToCopy, forType: .string)
+        }
     }
     
     @objc private func tableViewAddClicked(_ sender: AnyObject) {
@@ -282,7 +323,12 @@ extension ViewController: NSTableViewDelegate {
                             view.textField?.stringValue = "\(Int(round(r*255))), \(Int(round(g*255))), \(Int(round(b*255)))"
                         }
                         else {
-                            view.textField?.stringValue = "\(r), \(g), \(b)"
+                            if defaults.bool(forKey: settingsRoundRGBKey) {
+                                view.textField?.stringValue = "\(round(r * 100) / 100), \(round(g * 100) / 100), \(round(b * 100) / 100)"
+                            }
+                            else {
+                                view.textField?.stringValue = "\(r), \(g), \(b)"
+                            }
                         }
                     }
                 }
@@ -312,6 +358,15 @@ extension ViewController: NSTableViewDelegate {
         return nil
     }
 }
+
+//extension ViewController: NSTouchBarDelegate {
+//    override func makeTouchBar() -> NSTouchBar? {
+//        let touchbar = NSTouchBar()
+//        touchbar.delegate = self
+////        touchbar.customizationIdentifier = .travelBar
+////        touchbar.defaultItemIdentifiers
+//    }
+//}
 
 extension NSColor {
 
