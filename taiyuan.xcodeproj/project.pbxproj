@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		08096FFB250B228F008CC8EE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 08096FFD250B228F008CC8EE /* Localizable.strings */; };
+		08097003250BD712008CC8EE /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08097002250BD712008CC8EE /* PreferencesViewController.swift */; };
 		08293312250AB18D009E4B3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08293311250AB18D009E4B3D /* AppDelegate.swift */; };
 		08293314250AB18D009E4B3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08293313250AB18D009E4B3D /* ViewController.swift */; };
 		08293316250AB191009E4B3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08293315250AB191009E4B3D /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 		08096FFF250B22DD008CC8EE /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		08097000250B22ED008CC8EE /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		08097001250B22ED008CC8EE /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		08097002250BD712008CC8EE /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		0829330E250AB18D009E4B3D /* taiyuan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = taiyuan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08293311250AB18D009E4B3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08293313250AB18D009E4B3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				08096FFD250B228F008CC8EE /* Localizable.strings */,
 				08293311250AB18D009E4B3D /* AppDelegate.swift */,
 				08293313250AB18D009E4B3D /* ViewController.swift */,
+				08097002250BD712008CC8EE /* PreferencesViewController.swift */,
 				08293315250AB191009E4B3D /* Assets.xcassets */,
 				08293317250AB191009E4B3D /* Main.storyboard */,
 				0829331A250AB191009E4B3D /* Info.plist */,
@@ -266,6 +269,7 @@
 			files = (
 				08293314250AB18D009E4B3D /* ViewController.swift in Sources */,
 				08293312250AB18D009E4B3D /* AppDelegate.swift in Sources */,
+				08097003250BD712008CC8EE /* PreferencesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

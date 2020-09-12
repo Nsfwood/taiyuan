@@ -8,12 +8,17 @@
 import Cocoa
 import Foundation
 
+let settingsRGBTypeKey = "taiyuan.settings.rgbDisplayType"
+
 class ViewController: NSViewController {
     
     var bookmarks = [URL: Data]()
     var lists = NSColorList.availableColorLists
     var listIndex = 0
-    var rgbIs8Bit = true
+    
+    let defaults = UserDefaults.standard
+    
+    let pasteboard = NSPasteboard.general
 
     @IBOutlet weak var colorListPicker: NSPopUpButton!
     @IBOutlet weak var tableView: NSTableView!
@@ -68,7 +73,10 @@ class ViewController: NSViewController {
     }
     
     @objc private func tableViewCopyHEXClicked(_ sender: AnyObject) {
-        
+        let colorName = lists[listIndex].allKeys[tableView.clickedRow]
+        let colorHex = lists[listIndex].color(withKey: colorName)?.hexString
+        pasteboard.declareTypes([.string], owner: nil)
+        pasteboard.setString(colorHex!, forType: .string)
     }
     
     @objc private func tableViewCopyRGBClicked(_ sender: AnyObject) {
@@ -76,7 +84,7 @@ class ViewController: NSViewController {
     }
     
     @objc private func tableViewAddClicked(_ sender: AnyObject) {
-        
+//        let new = NSColor(named: "New Color")
     }
     
     @objc private func tableViewRenameClicked(_ sender: AnyObject) {
@@ -270,7 +278,7 @@ extension ViewController: NSTableViewDelegate {
             if let r = r {
                 if let g = g {
                     if let b = b {
-                        if rgbIs8Bit {
+                        if defaults.bool(forKey: settingsRGBTypeKey) {
                             view.textField?.stringValue = "\(Int(round(r*255))), \(Int(round(g*255))), \(Int(round(b*255)))"
                         }
                         else {
