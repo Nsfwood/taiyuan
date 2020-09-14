@@ -113,7 +113,7 @@
 "L1x-v5-Icw.title" = "Table View Cell";
 
 /* Class = "NSMenuItem"; title = "Bring All to Front"; ObjectID = "LE2-aR-0XJ"; */
-"LE2-aR-0XJ.title" = "Bring All to Front";
+"LE2-aR-0XJ.title" = "Alle nach vorne bringen";
 
 /* Class = "NSMenuItem"; title = "Floating Point"; ObjectID = "lI5-wK-LhE"; */
 "lI5-wK-LhE.title" = "Gleitkomma";
