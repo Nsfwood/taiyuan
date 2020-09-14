@@ -1,4 +1,4 @@
-# taiyuan
+# Palette
 A color palette manager for macOS.
 
 # Help
