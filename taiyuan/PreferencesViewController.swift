@@ -15,11 +15,13 @@ class PreferencesViewController: NSViewController {
     @IBOutlet weak var rgbFormatPopUp: NSPopUpButton!
     @IBOutlet weak var colorSpaceLabel: NSTextField!
     @IBOutlet weak var roundButton: NSButton!
+    @IBOutlet weak var bugButton: NSButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         colorSpaceLabel.stringValue = NSScreen.main?.colorSpace?.localizedName as! String
+        bugButton.stringValue = NSLocalizedString("Report a Bug", comment: "Button to report a bug in the app")
         
         // TRUE FOR 8 BIT
         if defaults.bool(forKey: settingsRGBTypeKey) {
@@ -78,6 +80,11 @@ class PreferencesViewController: NSViewController {
     
     @IBAction func translationHelpPressed(_ sender: Any) {
         let url = URL(string: "https://www.alexanderrohrig.com/translationhelp")!
+        NSWorkspace.shared.open(url)
+    }
+    
+    @IBAction func bugPressed(_ sender: Any) {
+        let url = URL(string: "https://github.com/Nsfwood/taiyuan/issues")!
         NSWorkspace.shared.open(url)
     }
     
