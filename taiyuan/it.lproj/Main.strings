@@ -175,3 +175,7 @@
 
 /* Class = "NSTableColumn"; headerCell.title = "Name"; ObjectID = "zNV-8q-PHg"; */
 "zNV-8q-PHg.headerCell.title" = "nome";
+
+//  Help with Translations button
+"2Ne-1f-BMw.title" = "HELP_WITH_TRANSLATIONS";
+

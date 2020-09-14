@@ -31,13 +31,13 @@ class ViewController: NSViewController {
 //        NSLocalizedString("Delete Color", comment: "")
         
         let menu = NSMenu()
-        menu.addItem(NSMenuItem(title: NSLocalizedString("Copy Color as HEX", comment: ""), action: #selector(tableViewCopyHEXClicked(_:)), keyEquivalent: ""))
-        menu.addItem(NSMenuItem(title: NSLocalizedString("Copy Color as RGB", comment: ""), action: #selector(tableViewCopyRGBClicked(_:)), keyEquivalent: ""))
+        menu.addItem(NSMenuItem(title: NSLocalizedString("Copy Color as HEX", comment: "Right click menu option to copy color as  hex code"), action: #selector(tableViewCopyHEXClicked(_:)), keyEquivalent: ""))
+        menu.addItem(NSMenuItem(title: NSLocalizedString("Copy Color as RGB", comment: "Right  click  menu option to  copy color  as  rgb code"), action: #selector(tableViewCopyRGBClicked(_:)), keyEquivalent: ""))
         
         if currentColorListIsEditable {
-            menu.addItem(NSMenuItem(title: NSLocalizedString("Add Color Below", comment: ""), action: #selector(tableViewAddClicked(_:)), keyEquivalent: ""))
-            menu.addItem(NSMenuItem(title: NSLocalizedString("Rename Color", comment: ""), action: #selector(tableViewRenameClicked(_:)), keyEquivalent: ""))
-            menu.addItem(NSMenuItem(title: NSLocalizedString("Delete Color", comment: ""), action: #selector(tableViewDeleteClicked(_:)), keyEquivalent: ""))
+            menu.addItem(NSMenuItem(title: NSLocalizedString("Add Color Below", comment: "Right click menu option to add another color below selected color"), action: #selector(tableViewAddClicked(_:)), keyEquivalent: ""))
+            menu.addItem(NSMenuItem(title: NSLocalizedString("Rename Color", comment: "Right click menu option to rename selected  color"), action: #selector(tableViewRenameClicked(_:)), keyEquivalent: ""))
+            menu.addItem(NSMenuItem(title: NSLocalizedString("Delete Color", comment: "Right click meny option to  delete selected color"), action: #selector(tableViewDeleteClicked(_:)), keyEquivalent: ""))
         }
         
         tableView.menu = menu
