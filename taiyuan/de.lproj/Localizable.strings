@@ -1,12 +1,15 @@
-/* 
-  Localizable.strings
-  taiyuan
-
-  Created by Alexander Rohrig on 9/10/20.
-*/
-
-"Copy Color as HEX" = "Farbe als Hex Kopieren" ;
-"Copy Color as RGB" = "Farbe als RGB Kopieren";
+/* Right click menu option to add another color below selected color */
 "Add Color Below" = "Neue Farbe Unten";
-"Rename Color" = "Farbe Umbenennen";
+
+/* Right click menu option to copy color as  hex code */
+"Copy Color as HEX" = "Farbe als Hex Kopieren";
+
+/* Right  click  menu option to  copy color  as  rgb code */
+"Copy Color as RGB" = "Farbe als RGB Kopieren";
+
+/* Right click meny option to  delete selected color */
 "Delete Color" = "Farbe Entfernen";
+
+/* Right click menu option to rename selected  color */
+"Rename Color" = "Farbe Umbenennen";
+

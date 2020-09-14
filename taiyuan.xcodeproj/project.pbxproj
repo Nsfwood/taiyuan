@@ -15,6 +15,7 @@
 		08293319250AB191009E4B3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08293317250AB191009E4B3D /* Main.storyboard */; };
 		08293325250AB192009E4B3D /* taiyuanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08293324250AB192009E4B3D /* taiyuanTests.swift */; };
 		08293330250AB192009E4B3D /* taiyuanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0829332F250AB192009E4B3D /* taiyuanUITests.swift */; };
+		08885BE3250EF93D002EE7EA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 08885BE1250EF93D002EE7EA /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		0829332B250AB192009E4B3D /* taiyuanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = taiyuanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0829332F250AB192009E4B3D /* taiyuanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = taiyuanUITests.swift; sourceTree = "<group>"; };
 		08293331250AB192009E4B3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08885BE2250EF93D002EE7EA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		08FD602C250ED6F800C0E5EC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		08FD602D250ED6F800C0E5EC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,6 +115,7 @@
 				08293315250AB191009E4B3D /* Assets.xcassets */,
 				08293317250AB191009E4B3D /* Main.storyboard */,
 				0829331A250AB191009E4B3D /* Info.plist */,
+				08885BE1250EF93D002EE7EA /* InfoPlist.strings */,
 				0829331B250AB191009E4B3D /* taiyuan.entitlements */,
 			);
 			path = taiyuan;
@@ -244,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08293316250AB191009E4B3D /* Assets.xcassets in Resources */,
+				08885BE3250EF93D002EE7EA /* InfoPlist.strings in Resources */,
 				08096FFB250B228F008CC8EE /* Localizable.strings in Resources */,
 				08293319250AB191009E4B3D /* Main.storyboard in Resources */,
 			);
@@ -328,6 +332,14 @@
 				08FD602C250ED6F800C0E5EC /* zh-Hans */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		08885BE1250EF93D002EE7EA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				08885BE2250EF93D002EE7EA /* de */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

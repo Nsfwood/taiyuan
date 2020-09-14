@@ -3,7 +3,7 @@
 //  taiyuan
 //
 //  Created by Alexander Rohrig on 9/11/20.
-//  Copyright © 2020 Alexander Rohrig. All rights reserved.
+//  
 //
 
 import Cocoa
@@ -18,6 +18,8 @@ class PreferencesViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        colorSpaceLabel.stringValue = NSScreen.main?.colorSpace?.localizedName as! String
         
         // TRUE FOR 8 BIT
         if defaults.bool(forKey: settingsRGBTypeKey) {
