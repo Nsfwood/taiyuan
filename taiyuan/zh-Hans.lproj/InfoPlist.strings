@@ -1,7 +1,7 @@
 /* Bundle name */
-"CFBundleName" = "Palette";
+"CFBundleName" = "调色板";
 
 /* Copyright (human-readable) */
 "NSHumanReadableCopyright" = "The Unlicense";
 
-"CFBundleDisplayName" = "Palette";
+"CFBundleDisplayName" = "调色板";

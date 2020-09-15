@@ -55,6 +55,9 @@
 		0829332B250AB192009E4B3D /* taiyuanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = taiyuanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0829332F250AB192009E4B3D /* taiyuanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = taiyuanUITests.swift; sourceTree = "<group>"; };
 		08293331250AB192009E4B3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0861BD8825114DAF00B61874 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0861BD8925114DBA00B61874 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		0861BD8A25114DBB00B61874 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		08885BE2250EF93D002EE7EA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		08FD602C250ED6F800C0E5EC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		08FD602D250ED6F800C0E5EC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -338,6 +341,9 @@
 			isa = PBXVariantGroup;
 			children = (
 				08885BE2250EF93D002EE7EA /* de */,
+				0861BD8825114DAF00B61874 /* it */,
+				0861BD8925114DBA00B61874 /* zh-Hans */,
+				0861BD8A25114DBB00B61874 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";

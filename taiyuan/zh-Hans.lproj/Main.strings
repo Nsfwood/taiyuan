@@ -75,7 +75,7 @@
 "Ivv-IT-QvG.title" = "Round to 2 digits";
 
 /* Class = "NSTableColumn"; headerCell.title = "RGB"; ObjectID = "K1I-PW-dv7"; */
-"K1I-PW-dv7.headerCell.title" = "RGB";
+"K1I-PW-dv7.headerCell.title" = "10进制";
 
 /* Class = "NSMenuItem"; title = "Show All"; ObjectID = "Kd2-mp-pUS"; */
 "Kd2-mp-pUS.title" = "Show All";
@@ -156,7 +156,7 @@
 "uQy-DD-JDr.title" = "taiyuan";
 
 /* Class = "NSTableColumn"; headerCell.title = "HEX"; ObjectID = "wPW-yN-XHX"; */
-"wPW-yN-XHX.headerCell.title" = "HEX";
+"wPW-yN-XHX.headerCell.title" = "16进制";
 
 /* Class = "NSMenuItem"; title = "Help"; ObjectID = "wpr-3q-Mcd"; */
 "wpr-3q-Mcd.title" = "Help";
