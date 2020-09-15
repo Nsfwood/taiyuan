@@ -37,9 +37,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func applicationDockMenu(_ sender: NSApplication) -> NSMenu? {
-        let menu = NSMenu(title: "Open Color Picker")
-//        let item = NSMenuItem(title: "Open Color Picker", action: <#T##Selector?#>, keyEquivalent: "+")
-        return menu
+        let dockMenu = NSMenu(title: "Dock")
+        dockMenu.addItem(NSMenuItem(title: NSLocalizedString("opencolorpicker", comment: "button to open system color picker"), action: #selector(openColorPicker), keyEquivalent: ""))
+        
+        return dockMenu
+    }
+    
+    @objc func openColorPicker() {
+        NSApplication.shared.orderFrontColorPanel(self)
+        NSApp.activate(ignoringOtherApps: true)
     }
     
     func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
