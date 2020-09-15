@@ -81,6 +81,7 @@ class ViewController: NSViewController {
             alert.alertStyle = .critical
             alert.addButton(withTitle: "OK")
             alert.runModal()
+            
             colorListPicker.selectItem(at: 0)
         }
         else {

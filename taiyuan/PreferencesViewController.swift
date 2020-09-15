@@ -73,6 +73,12 @@ class PreferencesViewController: NSViewController {
         }
     }
     
+    @IBAction func openColorFolderPressed(_ sender: Any) {
+        var location = FileManager.default.homeDirectoryForCurrentUser
+        location.appendPathComponent("Library/Colors")
+        NSWorkspace.shared.selectFile(nil, inFileViewerRootedAtPath: location.absoluteString)
+    }
+    
     @IBAction func donatePressed(_ sender: Any) {
         let url = URL(string: "https://www.buymeacoffee.com/BeAQzFbUP")!
         NSWorkspace.shared.open(url)
