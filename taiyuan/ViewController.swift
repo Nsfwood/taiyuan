@@ -74,23 +74,23 @@ class ViewController: NSViewController {
             currentColorListIsEditable = false
         }
         
-        if l.name == "System" {
-            let alert = NSAlert()
-            alert.messageText = "Unable to Show This Palette"
-            alert.informativeText = "Due to an unknown error, we are unable to show this color palette. We are working on a fix."
-            alert.alertStyle = .critical
-            alert.addButton(withTitle: "OK")
-            alert.runModal()
-            
-            colorListPicker.selectItem(at: 0)
-        }
-        else {
+//        if l.name == "System" {
+//            let alert = NSAlert()
+//            alert.messageText = "Unable to Show This Palette"
+//            alert.informativeText = "Due to an unknown error, we are unable to show this color palette. We are working on a fix."
+//            alert.alertStyle = .critical
+//            alert.addButton(withTitle: "OK")
+//            alert.runModal()
+//
+//            colorListPicker.selectItem(at: 0)
+//        }
+//        else {
             listIndex = colorListPicker.indexOfSelectedItem
             print(l)
             let keys = l.allKeys
             print(keys)
             tableView.reloadData()
-        }
+//        }
     }
     
     @IBAction func colorPickerPressed(_ sender: Any) {
@@ -314,26 +314,45 @@ extension ViewController: NSTableViewDelegate {
         else if tableColumn?.identifier == NSUserInterfaceItemIdentifier(rawValue: "rgbCol") {
             let cell = NSUserInterfaceItemIdentifier(rawValue: "nameCell")
             guard let view = tableView.makeView(withIdentifier: cell, owner: self) as? NSTableCellView else { return nil }
-            let r = lists[listIndex].color(withKey: currentColor)?.redComponent
-            let g = lists[listIndex].color(withKey: currentColor)?.greenComponent
-            let b = lists[listIndex].color(withKey: currentColor)?.blueComponent
-            if let r = r {
-                if let g = g {
-                    if let b = b {
-                        if defaults.bool(forKey: settingsRGBTypeKey) {
-                            view.textField?.stringValue = "\(Int(round(r*255))), \(Int(round(g*255))), \(Int(round(b*255)))"
-                        }
-                        else {
-                            if defaults.bool(forKey: settingsRoundRGBKey) {
-                                view.textField?.stringValue = "\(round(r * 100) / 100), \(round(g * 100) / 100), \(round(b * 100) / 100)"
-                            }
-                            else {
-                                view.textField?.stringValue = "\(r), \(g), \(b)"
-                            }
-                        }
-                    }
+            guard let colorAsRGB = lists[listIndex].color(withKey: currentColor)?.usingColorSpace(.deviceRGB) else { return nil }
+            
+//            let r = lists[listIndex].color(withKey: currentColor)?.redComponent
+//            let g = lists[listIndex].color(withKey: currentColor)?.greenComponent
+//            let b = lists[listIndex].color(withKey: currentColor)?.blueComponent
+//            if let r = r {
+//                if let g = g {
+//                    if let b = b {
+//                        if defaults.bool(forKey: settingsRGBTypeKey) {
+//                            view.textField?.stringValue = "\(Int(round(r*255))), \(Int(round(g*255))), \(Int(round(b*255)))"
+//                        }
+//                        else {
+//                            if defaults.bool(forKey: settingsRoundRGBKey) {
+//                                view.textField?.stringValue = "\(round(r * 100) / 100), \(round(g * 100) / 100), \(round(b * 100) / 100)"
+//                            }
+//                            else {
+//                                view.textField?.stringValue = "\(r), \(g), \(b)"
+//                            }
+//                        }
+//                    }
+//                }
+//            }
+            
+            let r = colorAsRGB.redComponent
+            let g = colorAsRGB.greenComponent
+            let b = colorAsRGB.blueComponent
+            if defaults.bool(forKey: settingsRGBTypeKey) {
+                view.textField?.stringValue = "\(Int(round(r*255))), \(Int(round(g*255))), \(Int(round(b*255)))"
+            }
+            else {
+                if defaults.bool(forKey: settingsRoundRGBKey) {
+                    view.textField?.stringValue = "\(round(r * 100) / 100), \(round(g * 100) / 100), \(round(b * 100) / 100)"
+                }
+                else {
+                    view.textField?.stringValue = "\(r), \(g), \(b)"
                 }
             }
+            
+            
             view.textField?.font = NSFont.monospacedSystemFont(ofSize: NSFont.systemFontSize(for: .regular), weight: .regular)
             return view
         }

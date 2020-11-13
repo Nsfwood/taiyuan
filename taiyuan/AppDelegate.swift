@@ -23,6 +23,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
+    @IBAction func checkUpdates(_ sender: Any) {
+        let url = URL(string: "https://github.com/Nsfwood/taiyuan/releases")!
+        NSWorkspace.shared.open(url)
+    }
+    
     @IBAction func helpPressed(_ sender: Any) {
         let url = URL(string: "https://github.com/Nsfwood/taiyuan/blob/master/README.md#help")!
         NSWorkspace.shared.open(url)
@@ -36,12 +41,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to tear down your application
     }
     
-    func applicationDockMenu(_ sender: NSApplication) -> NSMenu? {
-        let dockMenu = NSMenu(title: "Dock")
-        dockMenu.addItem(NSMenuItem(title: NSLocalizedString("opencolorpicker", comment: "button to open system color picker"), action: #selector(openColorPicker), keyEquivalent: ""))
-        
-        return dockMenu
-    }
+//    func applicationDockMenu(_ sender: NSApplication) -> NSMenu? {
+//        let dockMenu = NSMenu(title: "Dock")
+//        dockMenu.addItem(NSMenuItem(title: NSLocalizedString("opencolorpicker", comment: "button to open system color picker"), action: #selector(openColorPicker), keyEquivalent: ""))
+//        
+//        return dockMenu
+//    }
     
     @objc func openColorPicker() {
         NSApplication.shared.orderFrontColorPanel(self)
